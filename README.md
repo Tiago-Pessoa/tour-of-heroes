@@ -22,8 +22,14 @@ Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.
 
 Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
 
+## Quality of the code
+
+[![DeepScan grade](https://deepscan.io/api/teams/18646/projects/21958/branches/642487/badge/grade.svg)](https://deepscan.io/dashboard#view=project&tid=18646&pid=21958&bid=642487)
+
 ## Further help
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
 # tour-of-heroes
 # tour-of-heroes
+
+
