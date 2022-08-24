@@ -17,6 +17,19 @@
         placeholder="Nome do Herói"
         type="text"
        />
+
+    </mat-form-field>
+
+    <mat-form-field>
+      <mat-label>Super Poder:</mat-label>
+      <input
+        id="power"
+        matInput
+        [(ngModel)]="hero.power"
+        placeholder="Poder do Herói"
+        type="text"
+       />
+
     </mat-form-field>
   </mat-card-content>
 
