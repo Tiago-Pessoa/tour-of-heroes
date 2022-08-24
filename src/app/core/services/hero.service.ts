@@ -26,7 +26,7 @@ constructor(
   getHero(id: number): Observable<Hero> {
     return this.http
     .get<Hero>(`${this.heroesUrl}/${id}`)
-    .pipe(tap((hero) => this.log(`id: ${id} - Nome: ${hero.name}`)));
+    .pipe(tap((hero) => this.log(`id: ${id} -- Nome: ${hero.name} -- Super Poder: ${hero.power}`)));
   }
 
   private log(message: string): void {
