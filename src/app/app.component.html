@@ -1,28 +1,8 @@
-<mat-toolbar color="primary">
-  <span>{{ title }}</span>
-
-  <span fxFlex></span>
-
-  <button
-    mat-icon-button
-    matTooltip="Painel de Controle"
-    aria-label="Painel de Controle"
-    routerLink="/dashboard"
-    >
-    <mat-icon>dashboard</mat-icon>
-  </button>
-  <button
-    mat-icon-button
-    matTooltip="Heróis"
-    aria-label="Lista de Heróis"
-    routerLink="/heroes"
-    >
-    <mat-icon>scuba_diving</mat-icon>
-  </button>
-</mat-toolbar>
+<app-toolbar [title]="title" [menuItems]="menuItems"></app-toolbar>
 
 <div class="content" fxLayoutGap="12px">
   <router-outlet></router-outlet>
+
   <app-messages></app-messages>
 </div>
 
