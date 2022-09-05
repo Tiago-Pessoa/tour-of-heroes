@@ -7,6 +7,16 @@
   </li>
 </ul> -->
 
+
+
+<button class="add-button" color="accent" mat-fab routerLink="new" matTooltip="Adicionar Herói">
+
+<mat-icon>add</mat-icon>
+
+</button>
+
+
+
 <mat-table [dataSource]="heroes" class="mat-elevation-z8">
   <!-- id-->
   <ng-container matColumnDef="id">
@@ -20,6 +30,16 @@
     <mat-cell *matCellDef="let row"> {{row.name}} </mat-cell>
   </ng-container>
 
+  <!-- Actions-->
+  <ng-container matColumnDef="actions">
+    <mat-header-cell *matHeaderCellDef>Deletar</mat-header-cell>
+    <mat-cell *matCellDef="let row">
+      <button mat-icon-button matTooltip="Deletar esse Herói?"
+      (click)="delete(row); $event.stopPropagation()">
+        <mat-icon>delete</mat-icon>
+      </button>
+    </mat-cell>
+  </ng-container>
 
 
   <!-- Header and Row Declarations -->

@@ -10,7 +10,7 @@ import { HeroService } from '../../../core/services/hero.service';
   styleUrls: ['./heroes.component.scss']
 })
 export class HeroesComponent implements OnInit {
-  displayedColumns: string[] = ['id', 'name'];
+  displayedColumns: string[] = ['id', 'name', 'actions'];
   heroes: Hero[] = [];
 
 
@@ -21,8 +21,14 @@ export class HeroesComponent implements OnInit {
   }
 
   getHeroes(): void {
-   this.heroService.getHeroes().subscribe((heroes) =>
+   this.heroService.getAll().subscribe((heroes) =>
     (this.heroes = heroes));
+  }
+
+  delete(hero: Hero): void {
+    this.heroService.delete(hero).subscribe(() => {
+      this.heroes = this.heroes.filter(h => h !== hero)
+    })
   }
 
 

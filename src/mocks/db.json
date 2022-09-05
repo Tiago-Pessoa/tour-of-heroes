@@ -1,34 +1,84 @@
 {
- "heroes": [
-    {"id":1, "name": "Homem Aranha", "power": "Vai Teia"},
-    {"id":2, "name": "Homem Gelo", "power": "Vire Gelo"},
-    {"id":3, "name": "Homem Invisível", "power": "Estou aqui"},
-    {"id":4, "name": "Homem Morcego", "power": "Dentada Fatal"},
-    {"id":5, "name": "Homem Pedra", "power": "Eita Pedrada"},
-    {"id":6, "name": "Homem Fumaça", "power": "Fumaça no Olho"},
-    {"id":7, "name": "Homem Lontra", "power": "Nada Tudo"},
-    {"id":8, "name": "Homem Crocodilo", "power": "Tudo Nada"},
-    {"id":9, "name": "Homem Sombra", "power": "Escuridão Total"},
-    {"id":10, "name": "Homem Homem", "power": "Eu"},
-    {"id":11, "name": "Homem Papagaio", "power": "Loro Loro"},
-    {"id":12, "name": "Homem Texugo", "power": "Oi Meu Chapa"},
-    {"id":13, "name": "Homem Capivara", "power": "Carrapato Estrela"},
-    {"id":14, "name": "Homem Jumento", "power": "I Ó"},
-    {"id":15, "name": "Homem Carrapato", "power": "Passa seu Sangue"},
-    {"id":16, "name": "Homem Concha", "power": "Conchada Poderosa"},
-    {"id":17, "name": "Homem Bêbado", "power": "Pinga ni mim"},
-    {"id":18, "name": "Homem Mendigo", "power": "Passa um Real"},
-    {"id":19, "name": "Homem Mulher", "power": "Compra pra mim"},
-    {"id":20, "name": "Homem Polenta", "power": "Fubá"},
-    {"id":21, "name": "Homem Carro", "power": "Atropelamento Fatal"},
-    {"id":22, "name": "Homem Biruta", "power": "Retardo Mental"},
-    {"id":23, "name": "Homem Rato", "power": "Roedor da Maldade"},
-    {"id":24, "name": "Homem Tatuado", "power": "Agulha fatal"},
-    {"id":25, "name": "Homem Criança", "power": "Choro Poderoso"},
-    {"id":26, "name": "Homem Ladrão", "power": "Perdeu Perdeu"},
-    {"id":27, "name": "Homem Pastor", "power": "Benção da Unção"},
-    {"id":28, "name": "Homem Bomba", "power": "Explosão fatal"},
-    {"id":29, "name": "Homem Curvado", "power": "Coluna torta"},
-    {"id":30, "name": "Homem Profeta", "power": "Vai Queimar"}
+  "heroes": [
+    {
+      "id": 1,
+      "name": "Tiago Pessoa",
+      "power": "Vencer sempre, mesmo quando perder!"
+    },
+    {
+      "id": 2,
+      "name": "Homem Gelo",
+      "power": "Vire Gelo"
+    },
+    {
+      "id": 3,
+      "name": "Homem Invisível",
+      "power": "Estou aqui"
+    },
+    {
+      "id": 4,
+      "name": "Homem Morcego",
+      "power": "Dentada Fatal"
+    },
+    {
+      "id": 5,
+      "name": "Homem Lontra ",
+      "power": "Mata na Hora"
+    },
+    {
+      "id": 6,
+      "name": "Homem Papagaio",
+      "power": "Loro Loro"
+    },
+    {
+      "id": 7,
+      "name": "Homem Texugo",
+      "power": "Oi Meu Chapa"
+    },
+    {
+      "id": 8,
+      "name": "Homem Carrapato",
+      "power": "Passa seu Sangue"
+    },
+    {
+      "id": 9,
+      "name": "Homem Mendigo",
+      "power": "Passa um Real"
+    },
+    {
+      "id": 10,
+      "name": "Homem Ladrão",
+      "power": "Perdeu Perdeu"
+    },
+    {
+      "id": 11,
+      "name": "Homem Bomba",
+      "power": "Explosão fatal"
+    },
+    {
+      "id": 12,
+      "name": "Homem Curvado",
+      "power": "Coluna Torta"
+    },
+    {
+      "name": "Homem Areia",
+      "power": "Areia no Olho",
+      "id": 13
+    },
+    {
+      "name": "Super Choque",
+      "power": "Chocar",
+      "id": 14
+    },
+    {
+      "id": 15,
+      "name": "Homem Sabão",
+      "power": "Bolhas Venenosas"
+    },
+    {
+      "name": "Homem Careca",
+      "power": "Cabelo na Sopa",
+      "id": 16
+    }
   ]
 }

@@ -6,8 +6,15 @@ import { FlexLayoutModule } from '@angular/flex-layout';
 import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
 import { PageNotFoundComponent } from './components/page-not-found.component';
+import { LoadingComponent } from './components/loading/loading.component';
+import { HTTP_INTERCEPTORS } from '@angular/common/http';
+import { LoadingInterceptor } from './interceptors/loading.interceptor';
+import { HttpErrorInterceptor } from './interceptors/http-error.interceptor';
+import { ConfirmationDialogComponent } from './components/confirmation-dialog/confirmation-dialog.component';
 
 const COMPONENTS = [
+  ConfirmationDialogComponent,
+  LoadingComponent,
   MessagesComponent,
   ToolbarComponent,
   PageNotFoundComponent
@@ -20,9 +27,21 @@ const MODULES = [
 ];
 
 @NgModule({
-  declarations: [COMPONENTS ],
+  declarations: [COMPONENTS],
   imports: [CommonModule, MODULES],
-  exports: [COMPONENTS, MODULES]
+  exports: [COMPONENTS, MODULES],
+  providers: [
+    {
+      provide: HTTP_INTERCEPTORS,
+      useClass: LoadingInterceptor,
+      multi: true,
+    },
+    {
+      provide: HTTP_INTERCEPTORS,
+      useClass: HttpErrorInterceptor,
+      multi: true,
+    },
+  ],
 })
 export class CoreModule {
   constructor(@Optional() @SkipSelf() parentModule?: CoreModule){
