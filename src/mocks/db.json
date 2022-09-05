@@ -2,7 +2,7 @@
   "heroes": [
     {
       "id": 1,
-      "name": "Tiago Pessoa",
+      "name": "Tiago Roberto Pessoa",
       "power": "Vencer sempre, mesmo quando perder!"
     },
     {
@@ -17,68 +17,38 @@
     },
     {
       "id": 4,
-      "name": "Homem Morcego",
-      "power": "Dentada Fatal"
-    },
-    {
-      "id": 5,
-      "name": "Homem Lontra ",
-      "power": "Mata na Hora"
-    },
-    {
-      "id": 6,
-      "name": "Homem Papagaio",
-      "power": "Loro Loro"
-    },
-    {
-      "id": 7,
       "name": "Homem Texugo",
       "power": "Oi Meu Chapa"
     },
     {
-      "id": 8,
+      "id": 5,
       "name": "Homem Carrapato",
       "power": "Passa seu Sangue"
     },
     {
-      "id": 9,
+      "id": 6,
       "name": "Homem Mendigo",
       "power": "Passa um Real"
     },
     {
-      "id": 10,
-      "name": "Homem Ladrão",
-      "power": "Perdeu Perdeu"
-    },
-    {
-      "id": 11,
+      "id": 7,
       "name": "Homem Bomba",
       "power": "Explosão fatal"
     },
     {
-      "id": 12,
-      "name": "Homem Curvado",
-      "power": "Coluna Torta"
-    },
-    {
       "name": "Homem Areia",
       "power": "Areia no Olho",
-      "id": 13
+      "id": 8
     },
     {
       "name": "Super Choque",
       "power": "Chocar",
-      "id": 14
+      "id": 9
     },
     {
-      "id": 15,
-      "name": "Homem Sabão",
-      "power": "Bolhas Venenosas"
-    },
-    {
-      "name": "Homem Careca",
-      "power": "Cabelo na Sopa",
-      "id": 16
+      "name": "Homem Formiga",
+      "power": "Ferroada da morte",
+      "id": 10
     }
   ]
 }

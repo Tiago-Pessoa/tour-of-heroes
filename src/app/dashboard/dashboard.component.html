@@ -1,15 +1,8 @@
 <h1>Painel de Controle</h1>
+<div fxLayout="column" fxLayoutGap="24px">
+  <div fxLayout="row" fxLayout.xs="column" fxLayoutGap="10px" fxLayoutAlign="space-between">
 
-  <div fxLayout="row"
-       fxLayout.xs="column"
-       fxLayoutGap="10px"
-       fxLayoutAlign="space-between"
-  >
-
-    <mat-card class="pointer"
-      *ngFor="let hero of heroes"
-      [routerLink]="['/heroes', hero.id]"
-    >
+    <mat-card class="pointer" *ngFor="let hero of heroes" [routerLink]="['/heroes', hero.id]">
 
       <mat-card-title>{{ hero.name }}</mat-card-title>
 
@@ -18,3 +11,5 @@
 
   </div>
 
+  <app-hero-search [label]="'Pesquisa de Heróis '" (selected)="onSelected($event)"></app-hero-search>
+</div>

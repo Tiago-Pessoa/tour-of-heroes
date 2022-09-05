@@ -10,4 +10,13 @@
   background: rgb(247, 241, 241);
 }
 
+.mat-column-id {
+  max-width: 60px;
+}
+
+.mat-column-actions {
+  border-left: 1px solid currentColor;
+  max-width: 60px;
+  padding-left: 16px;
+}
 

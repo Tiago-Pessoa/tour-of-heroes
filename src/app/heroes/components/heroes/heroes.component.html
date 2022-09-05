@@ -1,21 +1,15 @@
 <h1>Os Heróis</h1>
-<!-- <ul class="heroes">
-  <li *ngFor="let hero of heroes"
-  routerLink="/heroes/{{hero.id}}"
-   >
-    <span>{{hero.id}}</span> {{ hero.name }}
-  </li>
-</ul> -->
 
-
-
-<button class="add-button" color="accent" mat-fab routerLink="new" matTooltip="Adicionar Herói">
-
-<mat-icon>add</mat-icon>
-
+<button
+  class="add-button"
+  color="accent"
+  mat-fab routerLink="new"
+  matTooltip="Adicionar Herói"
+>
+  <mat-icon>add</mat-icon>
 </button>
 
-
+<app-hero-search [label]="'Deletar Qual Herói?'" (selected)="onSelected($event)"></app-hero-search>
 
 <mat-table [dataSource]="heroes" class="mat-elevation-z8">
   <!-- id-->
