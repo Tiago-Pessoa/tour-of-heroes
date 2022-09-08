@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 import { FormBuilder, Validators } from '@angular/forms';
 
 @Component({
@@ -20,7 +20,7 @@ export class LoginComponent {
 
   onSubmit(): void {
     if (this.form.valid){
-
+      console.log("teste")
     }
   }
 }
