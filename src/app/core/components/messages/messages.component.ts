@@ -5,10 +5,6 @@ import { MessageService } from '../../services/message.service';
   selector: 'app-messages',
   templateUrl: './messages.component.html',
 })
-export class MessagesComponent{
-
-  constructor(public messageService: MessageService) { }
-
-
-
+export class MessagesComponent {
+  constructor(public messageService: MessageService) {}
 }

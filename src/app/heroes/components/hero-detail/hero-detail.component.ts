@@ -45,7 +45,7 @@ export class HeroDetailComponent implements OnInit {
         this.hero = hero;
         this.form.controls['id'].setValue(hero.id)
         this.form.controls['name'].setValue(hero.name)
-        this.form.controls['power'].setValue(hero.power);
+
 
       });
     }
@@ -62,7 +62,7 @@ export class HeroDetailComponent implements OnInit {
     if (valid) {
         const hero: Hero  = {
           name: value.name,
-          power: value.power,
+
         } as Hero;
 
     this.heroService.create(hero).subscribe(() => this.goBack());

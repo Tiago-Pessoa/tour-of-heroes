@@ -10,6 +10,7 @@ import { AuthService } from '../../services/auth.service';
 })
 
 export class LoginComponent {
+
   form = this.fb.group({
     email: [
       { value: 'tour@f.heroes', disabled: true },
@@ -23,7 +24,7 @@ export class LoginComponent {
 
 
   onSubmit(): void {
-    if (this.form.valid) {
+    if (this.form.value === undefined && this.form.valid) {
       this.authService.login(this.form.value)
     }
   }

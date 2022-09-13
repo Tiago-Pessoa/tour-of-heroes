@@ -2,53 +2,43 @@
   "heroes": [
     {
       "id": 1,
-      "name": "Tiago Roberto Pessoa",
-      "power": "Vencer sempre, mesmo quando perder!"
+      "name": "Wolverine"
     },
     {
       "id": 2,
-      "name": "Homem Gelo",
-      "power": "Vire Gelo"
+      "name": "Homem Aranha"
     },
     {
       "id": 3,
-      "name": "Homem Invisível",
-      "power": "Estou aqui"
+      "name": "Batman"
     },
     {
       "id": 4,
-      "name": "Homem Texugo",
-      "power": "Oi Meu Chapa"
+      "name": "Mulher Maravilha"
     },
     {
       "id": 5,
-      "name": "Homem Carrapato",
-      "power": "Passa seu Sangue"
+      "name": "Pantera Negra"
     },
     {
       "id": 6,
-      "name": "Homem Mendigo",
-      "power": "Passa um Real"
+      "name": "Mulher Gato"
     },
     {
       "id": 7,
-      "name": "Homem Bomba",
-      "power": "Explosão fatal"
+      "name": "Capitã Marvel"
     },
     {
-      "name": "Homem Areia",
-      "power": "Areia no Olho",
-      "id": 8
+      "id": 8,
+      "name": "Hulk"
     },
     {
-      "name": "Super Choque",
-      "power": "Chocar",
-      "id": 9
+      "id": 9,
+      "name": "Homem de Ferro"
     },
     {
-      "name": "Homem Formiga",
-      "power": "Ferroada da morte",
-      "id": 10
+      "id": 10,
+      "name": "Capitão América"
     }
   ]
 }

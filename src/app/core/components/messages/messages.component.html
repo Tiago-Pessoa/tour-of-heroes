@@ -1,37 +1,23 @@
-<!-- <div *ngIf="messageService.getMessages().length">
-
-<h2>Mensagens</h2>
-
-<button color="warn" mat-raised-button (click)="messageService.clear()">Apagar Mensagens</button>
-
-<div *ngFor="let message of messageService.getMessages()">
-  {{ message }}
-</div>
-
-</div> -->
-
-
 <mat-accordion *ngIf="messageService.getMessages().length">
-  <mat-expansion-panel expanded='true'>
+  <mat-expansion-panel expanded="true">
     <mat-expansion-panel-header>
-      <mat-panel-title>
-        Mensagens
-      </mat-panel-title>
+      <mat-panel-title> Messages </mat-panel-title>
+
       <mat-panel-description>
-        {{ messageService.getMessages().length}} Registro(s)
+        {{ messageService.getMessages().length }} record(s)
       </mat-panel-description>
     </mat-expansion-panel-header>
 
-    <div>
-      <p>
-        <button color="warn" mat-raised-button (click)="messageService.clear()">Apagar Mensagens</button>
-      </p>
-      </div>
+    <p>
+      <button color="warn" mat-raised-button (click)="messageService.clear()">
+        Clear messages
+      </button>
+    </p>
 
-      <mat-list role="list">
-        <mat-list-item role="listitem"  *ngFor="let message of messageService.getMessages()">
-          {{ message }}
-        </mat-list-item>
-      </mat-list>
+    <mat-list>
+      <mat-list-item *ngFor="let message of messageService.getMessages()">
+        {{ message }}
+      </mat-list-item>
+    </mat-list>
   </mat-expansion-panel>
 </mat-accordion>

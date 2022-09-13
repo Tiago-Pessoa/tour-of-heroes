@@ -1,13 +1,19 @@
 import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { MatAutocompleteSelectedEvent } from '@angular/material/autocomplete';
-import { debounceTime, distinctUntilChanged, Observable, Subject, switchMap } from 'rxjs';
-import { Hero } from 'src/app/core/models/hero.model';
-import { HeroService } from 'src/app/core/services/hero.service';
+import {
+  debounceTime,
+  distinctUntilChanged,
+  Observable,
+  Subject,
+  switchMap,
+} from 'rxjs';
+import { Hero } from '../../../core/models/hero.model';
+import { HeroService } from '../../../core/services/hero.service';
 
 @Component({
   selector: 'app-hero-search',
   templateUrl: './hero-search.component.html',
-  styleUrls: ['./hero-search.component.scss']
+  styleUrls: ['./hero-search.component.scss'],
 })
 export class HeroSearchComponent implements OnInit {
   heroes$!: Observable<Hero[]>;
@@ -16,7 +22,7 @@ export class HeroSearchComponent implements OnInit {
   private searchTerm = new Subject<string>();
   @Output() private selected = new EventEmitter<Hero>();
 
-  constructor(private heroService: HeroService) { }
+  constructor(private heroService: HeroService) {}
 
   ngOnInit(): void {
     this.heroes$ = this.searchTerm.pipe(
@@ -36,5 +42,4 @@ export class HeroSearchComponent implements OnInit {
   search(term: string): void {
     this.searchTerm.next(term);
   }
-
 }

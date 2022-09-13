@@ -1,23 +1,34 @@
 import { Component } from '@angular/core';
+import { Observable } from 'rxjs';
+import { AuthService } from './auth/services/auth.service';
 import { MenuItem } from './core/models/menu-item.model';
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
-  styleUrls: ['./app.component.scss']
+  styleUrls: ['./app.component.scss'],
 })
 export class AppComponent {
-  title = 'Caminho dos Heróis';
+  isLoggedIn$: Observable<boolean>;
   menuItems: MenuItem[] = [
     {
-      icon: 'settings_accessibility',
+      matIcon: 'dashboard',
       routerLink: '/dashboard',
-      toolTipText: 'Painel de Heróis'
+      toolTipText: 'Dashboard',
     },
     {
-      icon: 'scuba_diving',
+      fasIcon: 'mask',
       routerLink: '/heroes',
-      toolTipText: 'Heróis'
+      toolTipText: 'Heroes',
     },
   ];
+  title = 'Tour of Heroes';
+
+  constructor(private authService: AuthService) {
+    this.isLoggedIn$ = this.authService.isLoggedIn$;
+  }
+
+  onLogout(): void {
+    this.authService.logout();
+  }
 }

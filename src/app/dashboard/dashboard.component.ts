@@ -6,12 +6,12 @@ import { HeroService } from '../core/services/hero.service';
 @Component({
   selector: 'app-dashboard',
   templateUrl: './dashboard.component.html',
-  styleUrls: ['./dashboard.component.scss']
+  styleUrls: ['./dashboard.component.scss'],
 })
 export class DashboardComponent implements OnInit {
-heroes: Hero[] = [];
+  heroes: Hero[] = [];
 
-  constructor(private heroService: HeroService, private router: Router) { }
+  constructor(private heroService: HeroService, private router: Router) {}
 
   ngOnInit(): void {
     this.getHeroes();
@@ -19,11 +19,11 @@ heroes: Hero[] = [];
 
   getHeroes(): void {
     this.heroService
-    .getAll()
-    .subscribe((heroes) => (this.heroes = heroes.slice(0, 4)));
+      .getAll()
+      .subscribe((heroes) => (this.heroes = heroes.slice(1, 5)));
   }
 
   onSelected(hero: Hero): void {
-    this.router.navigate(['/heroes',hero.id]);
+    this.router.navigate(['/heroes', hero.id]);
   }
 }

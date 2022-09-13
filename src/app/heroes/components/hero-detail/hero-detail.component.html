@@ -1,55 +1,34 @@
-  <h1>{{ isEditing ?  "Detalhes:" : "Adicionar" }} Herói</h1>
+<h1>{{ isEditing ? "Update" : "Create" }} Hero</h1>
 
 <form [formGroup]="form" novalidate>
   <mat-card>
     <mat-card-content fxLayout="column">
-
-    <!-- ID -->
+      <!-- id -->
       <mat-form-field *ngIf="isEditing">
         <mat-label>ID</mat-label>
         <input matInput formControlName="id" />
       </mat-form-field>
 
-    <!-- Nome -->
+      <!-- name -->
       <mat-form-field>
-        <mat-label>Herói:</mat-label>
+        <mat-label>Hero name</mat-label>
+
         <input
           id="name"
           formControlName="name"
           matInput
-          placeholder="Nome do Herói"
+          placeholder="Name"
           type="text"
         />
+
         <mat-error *ngIf="form.controls['name'].hasError('required')">
-          Campo Obrigatório
+          Name is required.
         </mat-error>
 
         <mat-error *ngIf="form.controls['name'].hasError('minlength')">
-          Nome deve ter no mínimo 8 Caracteres
+          Name shoud contain at least 3 characters.
         </mat-error>
-
       </mat-form-field>
-
-    <!-- Poder -->
-      <mat-form-field>
-        <mat-label>Super Poder:</mat-label>
-        <input
-          id="power"
-          formControlName="power"
-          matInput
-          placeholder="Poder do Herói"
-          type="text"
-        />
-        <mat-error  *ngIf="form.controls['power'].hasError('required')">
-          Campo Obrigatório
-        </mat-error>
-
-        <mat-error *ngIf="form.controls['power'].hasError('minlength')">
-          Poder deve ter no mínimo 8 Caracteres
-        </mat-error>
-
-      </mat-form-field>
-
     </mat-card-content>
 
     <mat-card-actions>
@@ -58,19 +37,20 @@
         mat-raised-button
         *ngIf="!isEditing"
         (click)="create()"
-        >
-          Adicionar
+      >
+        Create
       </button>
+
       <button
         color="primary"
         mat-raised-button
         *ngIf="isEditing"
         (click)="update()"
-        >
-          Alterar
+      >
+        Update
       </button>
 
-      <button mat-raised-button (click)="goBack()">Voltar</button>
+      <button mat-raised-button (click)="goBack()">Go back</button>
     </mat-card-actions>
   </mat-card>
 </form>
